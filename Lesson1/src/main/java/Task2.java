@@ -10,7 +10,9 @@ public class Task2 {
         System.out.println("Введите числа");
         for (int i = 0 ; i < size; i++ ){
             array[i] = input.nextInt();
-            if (array[i] > 0) count++;
+            if (array[i] > 0) {
+                count++;
+            }
         }
         System.out.println("Количество положительных чисел "+count);
     }
