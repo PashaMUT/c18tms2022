@@ -61,8 +61,6 @@ public class HomeWork {
         for (int i = 0; i <= array.length ; i++) {
             sum += i;
         }
-        System.out.println("!!!!");
-        System.out.println(sum);
         return sum/array.length;
     }
 
