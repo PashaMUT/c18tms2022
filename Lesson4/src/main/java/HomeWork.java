@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.MAX_VALUE;
+
 public class HomeWork {
 
     public static void main(String[] args) {
@@ -29,20 +31,17 @@ public class HomeWork {
         }
     }
     public static void lesser() {
-        float min = 0;
+        float min = Float.MAX_VALUE;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 3 вещественных числа:");
         float[] floats = new float[3];
-        for (int i = 0; i < 3 ; i++) {
-            floats[i]=scanner.nextFloat();
-            floats[i]=Math.abs(floats[i]);
-            min = floats[0];
+        for (int i = 0; i < floats.length; i++) {
+            floats[i] = Math.abs(scanner.nextFloat());
             if (floats[i] < min) {
                 min = floats[i];
             }
         }
         System.out.println(min);
-
     }
 
     private static void time() {
