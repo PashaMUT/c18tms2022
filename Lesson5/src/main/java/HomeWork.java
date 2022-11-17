@@ -14,7 +14,10 @@ public class HomeWork {
         triangle();
         massif();
     }
-
+    //1) Задача на оператор switch!
+//        Рандомно генерируется число От 1 до 7.
+//        Если число равно 1, выводим на консоль “Понедельник”, 2 –”Вторник” и так далее.
+//        Если 6 или 7 – “Выходной”.
     public static void week() {
         Random random = new Random();
         int i = random.nextInt(7);
@@ -40,15 +43,17 @@ public class HomeWork {
                 break;
         }
     }
-
+    //2) Одноклеточная амеба каждые 3 часа делится на 2 клетки. Определить,
+//         сколько амеб будет через 3, 6, 9, 12,..., 24 часа
     public static void amoeba() {
-        int hours = 3;
-        int cell = 1;
-        for (int i = 0; i < 24 / hours; i++) {
-            cell = cell * 2;
-            System.out.println(cell);
+        for (int i = 0; i <= 24; i += 3) {
+            System.out.println(fission(1, i) + "");
         }
     }
+    //3) В переменную записываем число.
+//        Надо вывести на экран сколько в этом числе цифр и положительное оно или отрицательное.
+//        Например, Введите число: 5
+//        "5 - это положительное число, количество цифр = 1"
 
     public static void number() {
         Scanner scanner = new Scanner(System.in);
@@ -62,6 +67,8 @@ public class HomeWork {
         System.out.println("количество цифр = " + length);
     }
 
+    //4) Дано 2 числа, день и месяц рождения. Написать программу, которая определяет знак зодиака человека.
+
     public static void summ(int a , int b) {
         int n = 0;
         for (int i = 0; i < b; i++) {
@@ -71,108 +78,6 @@ public class HomeWork {
     }
 
     public static void triangle() {
-        String[][] array = new String[4][4];
-        Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
-
-        switch (num) {
-            case (1):
-                array[3][3] = "*";
-                array[2][3] = "*";
-                array[1][3] = "*";
-                array[0][3] = "*";
-                array[3][2] = " ";
-                array[2][2] = "*";
-                array[1][2] = "*";
-                array[0][2] = "*";
-                array[3][1] = " ";
-                array[2][1] = " ";
-                array[1][1] = "*";
-                array[0][1] = "*";
-                array[3][0] = " ";
-                array[2][0] = " ";
-                array[1][0] = " ";
-                array[0][0] = "*";
-                for (String[] strings : array) {
-                    for (String string : strings) {
-                        System.out.print(string + "\t");
-                    }
-                    System.out.println();
-                }
-                break;
-                case (2):
-                array[3][3] = "*";
-                array[2][3] = " ";
-                array[1][3] = " ";
-                array[0][3] = " ";
-                array[3][2] = "*";
-                array[2][2] = "*";
-                array[1][2] = " ";
-                array[0][2] = " ";
-                array[3][1] = "*";
-                array[2][1] = "*";
-                array[1][1] = "*";
-                array[0][1] = " ";
-                array[3][0] = "*";
-                array[2][0] = "*";
-                array[1][0] = "*";
-                array[0][0] = "*";
-                for (String[] strings : array) {
-                    for (String string : strings) {
-                        System.out.print(string + "\t");
-                    }
-                    System.out.println();
-                }
-                break;
-                case (3):
-                array[3][3] = "*";
-                array[2][3] = "*";
-                array[1][3] = "*";
-                array[0][3] = "*";
-                array[3][2] = "*";
-                array[2][2] = "*";
-                array[1][2] = "*";
-                array[0][2] = " ";
-                array[3][1] = "*";
-                array[2][1] = "*";
-                array[1][1] = " ";
-                array[0][1] = " ";
-                array[3][0] = "*";
-                array[2][0] = " ";
-                array[1][0] = " ";
-                array[0][0] = " ";
-                for (String[] strings : array) {
-                    for (String string : strings) {
-                        System.out.print(string + "\t");
-                    }
-                    System.out.println();
-                }
-                break;
-                case (4):
-                array[3][3] = " ";
-                array[2][3] = " ";
-                array[1][3] = " ";
-                array[0][3] = "*";
-                array[3][2] = " ";
-                array[2][2] = " ";
-                array[1][2] = "*";
-                array[0][2] = "*";
-                array[3][1] = " ";
-                array[2][1] = "*";
-                array[1][1] = "*";
-                array[0][1] = "*";
-                array[3][0] = "*";
-                array[2][0] = "*";
-                array[1][0] = "*";
-                array[0][0] = "*";
-                for (String[] strings : array) {
-                    for (String string : strings) {
-                        System.out.print(string + "\t");
-                    }
-                    System.out.println();
-                }
-                break;
-        }
     }
 
     public static void massif() {
@@ -189,22 +94,13 @@ public class HomeWork {
 
     }
 
+    public static int fission(int start , int time) {
+        return (int) (start * Math.pow(2, time / 3));
+    }
 
 //        Задачи:
-//1) Задача на оператор switch!
-//        Рандомно генерируется число От 1 до 7.
-//        Если число равно 1, выводим на консоль “Понедельник”, 2 –”Вторник” и так далее.
-//        Если 6 или 7 – “Выходной”.
 
-//2) Одноклеточная амеба каждые 3 часа делится на 2 клетки. Определить,
-//         сколько амеб будет через 3, 6, 9, 12,..., 24 часа
 
-//3) В переменную записываем число.
-//        Надо вывести на экран сколько в этом числе цифр и положительное оно или отрицательное.
-//        Например, Введите число: 5
-//        "5 - это положительное число, количество цифр = 1"
-
-//4) Дано 2 числа, день и месяц рождения. Написать программу, которая определяет знак зодиака человека.
 
 
 //        5) Напишите реализацию метода summ(int a, int b), вычисляющий a*b, не пользуясь операцией
