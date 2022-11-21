@@ -1,3 +1,4 @@
+//4) Дано 2 числа, день и месяц рождения. Написать программу, которая определяет знак зодиака человека.
 public class Zodiac {
     public String getZodiacName(int month, int day) {
         switch (month) {
